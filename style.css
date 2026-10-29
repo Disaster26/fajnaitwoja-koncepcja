@@ -66,12 +66,18 @@ p{margin:0 0 1em}
 .dni li{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1.2fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--linia);align-items:baseline}
 .dni b{color:var(--malina);font-weight:900}
 .dni span{color:var(--ink);font-weight:600}
-.menu-note{font-size:.98rem}
+.zamow-mail{margin:0 0 16px;font-weight:700}
+.zamow-mail a{text-decoration:none}
 .menu-grid{align-items:start}
 .zamow{background:var(--krem);border-radius:var(--r);padding:clamp(22px,3vw,34px);margin-top:8px}
 .zamow h3{font-size:1.35rem}
 .zamow-tel{display:inline-block;font-size:clamp(1.7rem,3vw,2.2rem);font-weight:900;color:var(--malina);text-decoration:none;margin:0 0 14px}
 .zamow-adr{margin:0;padding-top:14px;border-top:1px solid var(--linia);color:var(--ink)}
+
+/* naglowek sekcji */
+.sek-glowa{display:flex;justify-content:space-between;align-items:end;gap:12px 48px;flex-wrap:wrap}
+.sek-glowa h2{margin:0}
+.sek-glowa p{margin:0;max-width:34em;font-size:1.05rem}
 
 /* oferta */
 .oferta{background:var(--krem)}
@@ -82,27 +88,30 @@ p{margin:0 0 1em}
 .kafel-t{position:absolute;inset:auto 0 0 0;padding:72px 22px 22px;background:linear-gradient(to top,rgba(30,12,20,.86),rgba(30,12,20,.55) 55%,rgba(30,12,20,0))}
 .kafel-t h3{color:#fff;font-size:1.4rem;margin-bottom:.25em}
 .kafel-t p{margin:0;font-size:.98rem;color:#fbeff2}
-.chipy-l{margin:30px 0 10px;font-weight:700;color:var(--ink)}
-.chipy{display:flex;flex-wrap:wrap;gap:10px}
-.chipy a{padding:10px 18px;border-radius:999px;background:#fff;border:1.5px solid var(--linia);color:var(--ink);text-decoration:none;font-weight:700}
-.chipy a:hover{border-color:var(--malina);color:var(--malina)}
 
 /* szkola */
 .szkola{background:var(--lime-bg)}
 .szkola-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
-.kroki{margin:0;padding:0 0 0 1.2em;display:grid;gap:12px;font-size:1.05rem;color:var(--ink)}
-.kroki li::marker{color:#6d8a0c}
+.szkola-txt p{font-size:1.06rem}
+.szkola-karta{font-weight:700;color:var(--ink)}
+.tabela{margin:0;border-top:1px solid #d6e3b0}
+.tabela div{display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:4px 24px;padding:16px 0;border-bottom:1px solid #d6e3b0}
+.tabela dt{font-weight:900;color:#4f6a06}
+.tabela dd{margin:0;color:var(--ink);font-weight:600}
 
 /* o nas */
 .onas{background:var(--bialy)}
-.onas-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
-.onas-foto{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px;align-items:end}
-.onas-foto figure{margin:0;border-radius:var(--r);overflow:hidden}
-.of1{aspect-ratio:3/4}.of2{aspect-ratio:3/4}
-.onas-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.onas-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,5vw,72px);align-items:center}
+.onas-foto{margin:0;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;max-height:620px}
+.onas-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
 .onas-txt p{font-size:1.06rem}
-.haslo{font-weight:800;color:var(--fuksja)}
-
+.wyroznienia{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--linia)}
+.wyroznienia li{display:grid;gap:2px;padding:14px 0;border-bottom:1px solid var(--linia)}
+.wyroznienia b{color:var(--malina-d);font-weight:900}
+.wyroznienia span{color:var(--txt)}
+.zespol{margin-top:clamp(40px,6vw,72px);margin-bottom:0}
+.zespol img{width:100%;height:auto;max-width:960px;margin:0 auto;border-radius:var(--r)}
+.zespol figcaption{text-align:center;margin-top:12px;font-weight:700;color:var(--ink)}
 
 /* kontakt */
 .kontakt{background:var(--krem)}
@@ -114,7 +123,9 @@ p{margin:0 0 1em}
 .adresy p{margin-bottom:.5em}
 .adresy a{font-weight:800}
 .mapa{border-radius:var(--r);overflow:hidden;border:1px solid var(--linia);aspect-ratio:16/9}
-.mapa iframe{width:100%;height:100%;border:0;display:block}
+.mapa{display:block;position:relative}
+.mapa img{width:100%;height:100%;object-fit:cover}
+.mapa-attr{position:absolute;right:0;bottom:0;background:rgba(255,255,255,.85);color:#333;font-size:12px;padding:2px 8px}
 .form{background:#fff;border-radius:var(--r);padding:clamp(22px,3vw,34px);display:grid;gap:14px}
 .form h3{font-size:1.35rem;margin:0 0 4px}
 .form label{display:grid;gap:6px;font-weight:700;color:var(--ink);font-size:.95rem}
@@ -157,6 +168,8 @@ p{margin:0 0 1em}
 
 @media (max-width:860px){
   .menu-grid,.szkola-grid,.onas-grid,.kontakt-grid{grid-template-columns:minmax(0,1fr)}
+  .onas-foto{aspect-ratio:4/3;max-height:none}
+  .onas-foto img{object-position:50% 30%}
   .kafle{grid-template-columns:minmax(0,1fr)}
   .kafel{aspect-ratio:16/10}
 }
@@ -178,6 +191,9 @@ p{margin:0 0 1em}
   .hero-cta .btn{width:100%}
   .hero-info{font-size:.9rem}
   .dni li{grid-template-columns:minmax(0,1fr);gap:2px;padding:12px 0}
+  .tabela div{grid-template-columns:minmax(0,1fr);gap:2px;padding:12px 0}
+  .sek-glowa{display:block}
+  .sek-glowa h2{margin-bottom:.4em}
   .adresy{grid-template-columns:minmax(0,1fr)}
   .mapa{aspect-ratio:4/3}
   .stopka-in{grid-template-columns:minmax(0,1fr)}
